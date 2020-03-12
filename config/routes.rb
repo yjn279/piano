@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get '/signup' => 'home#signup'
   get '/main' => 'home#main'
   get '/record' => 'home#record'
-  get '/timeline' => 'home#timeline'
+  get 'posts/index' => 'posts#index'
 end
