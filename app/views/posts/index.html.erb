@@ -1,8 +1,18 @@
+<header>
+  <div class="header-logo">
+    <a href="/testtop">PianoApp</a>
+  </div>
+  <ul class="header-menus">
+    <li><a href="/about">PianoAppとは</a></li>
+    <li><a href="/posts/new">新規投稿</a></li>
+  </ul>
+</header>
+
 <div class="main posts-index">
   <div class="container">
     <% @posts.each do |post| %>
       <div class="posts-index-item">
-        <%= post.content %>
+        <%= link_to(post.content, "/posts/#{post.id}") %>
       </div>
     <% end %>
   </div>

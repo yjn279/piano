@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Piano</title>
+    <title>PianoApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,15 +10,6 @@
   </head>
 
   <body>
-    <header>
-      <div class="header-logo">
-        <%= link_to("PianoApp", "/") %>
-      </div>
-      <ul class="header-menus">
-        <li><%= link_to("PianoAppとは", "/about") %></li>
-        <li><%= link_to("投稿一覧", "/posts/index") %></li>
-      </ul>
-    </header>
     <%= yield %>
   </body>
 </html>

@@ -3,12 +3,15 @@ class HomeController < ApplicationController
   end
   def about
   end
-  def signin
-  end
-  def signup
-  end
-  def main
-  end
   def record
   end
+  def testtop
+      end
+  def main
+      end
+  def signin
+      end
+  def signup
+      end
+  
 end
