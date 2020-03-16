@@ -36,6 +36,7 @@ puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
 puma (3.12.4) lib/puma/server.rb:476:in `process_client'
 puma (3.12.4) lib/puma/server.rb:334:in `block in run'
 puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+
 Started GET "/home/top" for ::1 at 2020-03-12 03:07:23 +0900
 Processing by HomeController#top as HTML
   Rendering home/top.html.erb within layouts/application
@@ -74,6 +75,7 @@ puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
 puma (3.12.4) lib/puma/server.rb:476:in `process_client'
 puma (3.12.4) lib/puma/server.rb:334:in `block in run'
 puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+
 Started GET "/index" for ::1 at 2020-03-12 03:07:42 +0900
   
 ActionController::RoutingError (uninitialized constant Home):
@@ -131,6 +133,7 @@ puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
 puma (3.12.4) lib/puma/server.rb:476:in `process_client'
 puma (3.12.4) lib/puma/server.rb:334:in `block in run'
 puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+
 Started GET "/index" for ::1 at 2020-03-12 03:09:18 +0900
 Processing by HomeController#index as HTML
   Rendering home/index.html.erb within layouts/application
@@ -169,6 +172,7 @@ puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
 puma (3.12.4) lib/puma/server.rb:476:in `process_client'
 puma (3.12.4) lib/puma/server.rb:334:in `block in run'
 puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+
 Started GET "/" for ::1 at 2020-03-12 03:17:34 +0900
 Processing by HomeController#top as HTML
   Rendering home/top.html.erb within layouts/application
@@ -408,6 +412,7 @@ puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
 puma (3.12.4) lib/puma/server.rb:476:in `process_client'
 puma (3.12.4) lib/puma/server.rb:334:in `block in run'
 puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+
 Started GET "/home/posts" for ::1 at 2020-03-13 01:26:17 +0900
 Processing by HomeController#PostsController as HTML
 Completed 406 Not Acceptable in 334ms (ActiveRecord: 0.0ms)
@@ -1045,6 +1050,7 @@ puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
 puma (3.12.4) lib/puma/server.rb:476:in `process_client'
 puma (3.12.4) lib/puma/server.rb:334:in `block in run'
 puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+
 Started POST "/signup" for ::1 at 2020-03-13 02:27:36 +0900
   
 ActionController::RoutingError (No route matches [POST] "/signup"):
@@ -1107,6 +1113,7 @@ puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
 puma (3.12.4) lib/puma/server.rb:476:in `process_client'
 puma (3.12.4) lib/puma/server.rb:334:in `block in run'
 puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+
 Started GET "/signup" for ::1 at 2020-03-13 02:28:14 +0900
 Processing by HomeController#signup as HTML
   Rendering home/signup.html.erb within layouts/application
@@ -1116,7 +1123,7 @@ Completed 200 OK in 218ms (Views: 208.0ms | ActiveRecord: 0.0ms)
 
 Started POST "/" for ::1 at 2020-03-13 02:28:16 +0900
   
-ActionController::RoutingError (No route matches [POST] "/"):
+ActionController::RoutingError (No route matches [POST] "/")
   
 actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
 web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
@@ -1145,6 +1152,7 @@ puma (3.12.4) lib/puma/server.rb:675:in `handle_request'
 puma (3.12.4) lib/puma/server.rb:476:in `process_client'
 puma (3.12.4) lib/puma/server.rb:334:in `block in run'
 puma (3.12.4) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+
 Started GET "/signup" for ::1 at 2020-03-13 02:28:27 +0900
 Processing by HomeController#signup as HTML
   Rendering home/signup.html.erb within layouts/application
