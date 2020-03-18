@@ -1337,3 +1337,126 @@ Processing by HomeController#top as HTML
 Completed 200 OK in 181ms (Views: 172.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-03-19 00:50:36 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/seiji/.rbenv/versions/2.6.5/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 254ms (Views: 247.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-03-19 00:50:42 +0900
+Processing by HomeController#about as HTML
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-19 00:50:47 +0900
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-19 00:50:48 +0900
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-19 00:50:50 +0900
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/about" for ::1 at 2020-03-19 00:50:50 +0900
+Processing by HomeController#about as HTML
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-19 00:50:54 +0900
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-03-19 00:50:55 +0900
+Processing by HomeController#top as HTML
+  Rendering home/top.html.erb within layouts/application
+  Rendered home/top.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/main" for ::1 at 2020-03-19 00:51:01 +0900
+Processing by HomeController#main as HTML
+  Rendering home/main.erb within layouts/application
+  Rendered home/main.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/record" for ::1 at 2020-03-19 00:51:02 +0900
+Processing by HomeController#record as HTML
+  Rendering home/record.html.erb within layouts/application
+  Rendered home/record.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for ::1 at 2020-03-19 00:51:08 +0900
+Processing by HomeController#signin as HTML
+  Rendering home/signin.erb within layouts/application
+  Rendered home/signin.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/record" for ::1 at 2020-03-19 00:51:14 +0900
+Processing by HomeController#record as HTML
+  Rendering home/record.html.erb within layouts/application
+  Rendered home/record.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/index" for ::1 at 2020-03-19 00:51:28 +0900
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" ORDER BY "posts"."created_at" DESC[0m
+  ↳ app/views/posts/index.html.erb:13
+  Rendered posts/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 24ms (Views: 18.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/testtop" for ::1 at 2020-03-19 00:51:30 +0900
+Processing by HomeController#testtop as HTML
+  Rendering home/testtop.html.erb within layouts/application
+  Rendered home/testtop.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 19ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signin" for ::1 at 2020-03-19 00:51:32 +0900
+Processing by HomeController#signin as HTML
+  Rendering home/signin.erb within layouts/application
+  Rendered home/signin.erb within layouts/application (0.9ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/testtop" for ::1 at 2020-03-19 00:51:34 +0900
+Processing by HomeController#testtop as HTML
+  Rendering home/testtop.html.erb within layouts/application
+  Rendered home/testtop.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 23ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/main" for ::1 at 2020-03-19 00:51:39 +0900
+Processing by HomeController#main as HTML
+  Rendering home/main.erb within layouts/application
+  Rendered home/main.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
