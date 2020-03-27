@@ -1,0 +1,29 @@
+<header>
+  <div class="header-logo">
+    <a href="/">TweetApp</a>
+  </div>
+  <ul class="header-menus">
+    <li>
+      <a href="/about">TweetAppとは</a>
+    </li>
+  </ul>
+</header>
+
+
+<div class="main posts-index">
+  <div class="container">
+
+      <!-- 以下の投稿を、変数post1を用いて書き換えてください -->
+      <% @kirokus.each do |kiroku| %>
+      <% %>
+      <div class="posts-index-item">
+      <%= link_to(kiroku.datetime.month.to_s + "/" + kiroku.datetime.day.to_s , "/kiroku/#{kiroku.id}") %>
+      <%= link_to(kiroku.datetime.strftime("%H:%M") , "/kiroku/#{kiroku.id}") %>
+      <%= link_to(kiroku.content, "/kiroku/#{kiroku.id}") %>
+
+      <%= link_to(kiroku.time.strftime("%H:%M"), "/kiroku/#{kiroku.id}") %>
+    </div>
+
+<% end %>
+    </div>
+  </div>

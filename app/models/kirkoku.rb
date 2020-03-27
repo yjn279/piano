@@ -1,0 +1,2 @@
+class Kirkoku < ApplicationRecord
+end
