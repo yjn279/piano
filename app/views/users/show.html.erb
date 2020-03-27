@@ -1,0 +1,22 @@
+<header>
+  <div class="header-logo">
+    <a href="/main">PianoApp</a>
+  </div>
+  <ul class="header-menus">
+    <li><a href="/testtop">ログアウト</a></li>
+  </ul>
+</header>
+
+
+<div class="main user-show">
+  <div class="container">
+    <div class="user">
+      <img src="<%= "/user_images/#{@user.image_name}" %>">
+      <!-- 以下で、ユーザー名を出力 -->
+      <h2><%= @user.name %></h2>
+      <!-- 以下で、メールアドレスを出力 -->
+      <p><%= @user.email %></p>
+      <%= link_to("編集", "/users/#{@user.id}/edit") %>
+    </div>
+  </div>
+</div>
