@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'records/index'
+  get 'kiroku/index' =>"kiroku#index"
+  get "kiroku/new" => "kiroku#new"
+  
+  get "kiroku/:id" => "kiroku#show"
+  post "kiroku/create" => "kiroku#create"
+  
+  get 'records/index' =>"records#index"
     post "users/:id/update" => "users#update"
     get "users/:id/edit" => "users#edit"
     post "users/create" => "users#create"

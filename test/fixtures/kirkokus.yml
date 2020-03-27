@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  datetime: 2020-03-27 15:24:33
+  time: 2020-03-27 15:24:33
+  content: MyText
+  image: MyString
+
+two:
+  datetime: 2020-03-27 15:24:33
+  time: 2020-03-27 15:24:33
+  content: MyText
+  image: MyString

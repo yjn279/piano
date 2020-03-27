@@ -1,0 +1,38 @@
+<header>
+  <div class="header-logo">
+    <a href="/main">PianoApp</a>
+  </div>
+  <ul class="header-menus">
+    <li><a href="/about">PianoAppとは</a></li>
+    <li><a href="/posts/index">投稿一覧</a></li>
+  </ul>
+</header>
+
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">記録する</h1>
+
+
+    <div class="main">
+      <%= form_tag("/kiroku/create") do %>
+        <table>
+          <tr>
+            <td align="right">練習開始：</td>
+            <td><input type="datetime-local" name="datetime"></td>
+          </tr>
+          <tr>
+            <td align="right">練習時間：</td>
+            <td><input type="time" name="time" value="演奏時間"></td>
+          </tr>
+        </table>
+        <p>要点・ひとことメモ<p>
+        <p><textarea name="content" rows="10" cols="50"></textarea></p>
+        <p><input type="file" name="image" value="写真"></p>
+        <p><input type="submit" value="記録する"></p>
+      <% end %>
+    </div>
+
+
+
+  </div>
+</div>

@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_26_121203) do
+ActiveRecord::Schema.define(version: 2020_03_27_062433) do
+
+  create_table "kirkokus", force: :cascade do |t|
+    t.datetime "datetime"
+    t.time "time"
+    t.text "content"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.text "content"
