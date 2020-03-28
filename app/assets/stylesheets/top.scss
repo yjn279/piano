@@ -1,0 +1,28 @@
+.top {
+  height: 100vh;
+  display: flex;  // 子要素を中央揃えに
+  justify-content: center;
+  align-items: center;  // ここまで
+  background-image: url("/top.jpg");
+  background-size: cover;
+}
+
+.top-container {
+  color: white;
+  text-align: center;
+}
+
+.top-container h1 {
+  font-size: 70px;
+  font-weight: 500;
+}
+
+.top-container p {
+  font-size: 24px;
+  padding-bottom: 120px;
+}
+
+.top-container a {
+  width: auto;
+  margin: 0 10px;
+}
