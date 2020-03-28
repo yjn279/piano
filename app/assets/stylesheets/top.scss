@@ -33,25 +33,37 @@
 @media (max-width: 670px) {
 
   .top {
-    height: 215px;  // px指定を変更したい！
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-image: url("/top-smartphon.jpg");
+  }
+
+  .top-container {
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
   }
 
   .top-container h1 {
-    font-size: 1.5rem;
-    padding-top: 50px;
+    width: 100%;
+    font-size: 4rem;
+    line-height: 1.2;
+    text-align: left;
+    padding: 50% 10px 20px 10px;
   }
 
   .top-container p {
-    font-size: 0.8rem;
-    padding-bottom: 20px;
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 0 10px 50px 10px;
   }
 
+  // .btn
   .top-container a {
-    display: block;
-    width: 93%;
-    margin-bottom: 10px;
+    display: inline-block;
+    width: 80%;
+    height: 60px;
+    font-size: 1.2rem;
+    text-align: center;
+    vertical-align: middle;
+    margin: 15px;
   }
 
 }
