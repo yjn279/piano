@@ -2,15 +2,12 @@
   display: flex;
   width: 100vw;
   height: 100vh;
+  position: absolute;
+  z-index: -2;
+  justify-content: center;  // 子要素を均等割り付け
+  align-items: center;  // 子要素を上下均等割り付け
+  background-color: black;
 
-  // 子要素を中央揃えに
-    justify-content: center;
-    align-items: center;
-
-  // 動画が読み込まれない場合の背景画像
-    // background-image: url("/top.jpg");
-    // background-size: cover;
-    // background-attachment: fixed;
 }
 
 .top-wrapper video {
