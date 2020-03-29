@@ -8,8 +8,18 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <header>
+      <div class="header-logo">
+        <a href="/testtop">PianoApp</a>
+      </div>
+      <ul class="header-menus">
+        <li><a href="/about">PianoAppとは</a></li>
+        <li><a href="/signup">新規登録</a></li>
+      </ul>
+    </header>
+    <!-- 以下をheaderの子要素にするとz-indexがローカルになる -->
+    <div class="header-background"></div>
     <% if flash[:notice]%>
       <div class="flash">
         <%= flash[:notice]%>
