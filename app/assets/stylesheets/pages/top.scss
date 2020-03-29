@@ -1,96 +1,85 @@
-.top {
+.top-wrapper {
+  display: flex;
+  width: 100vw;
   height: 100vh;
-  display: flex;  // 子要素を中央揃えに
-  justify-content: center;
-  align-items: center;  // ここまで
-  background-image: url("/top.jpg");
-  background-size: cover;
-  background-attachment: fixed;
+
+  // 子要素を中央揃えに
+    justify-content: center;
+    align-items: center;
+
+  // 動画が読み込まれない場合の背景画像
+    // background-image: url("/top.jpg");
+    // background-size: cover;
+    // background-attachment: fixed;
+}
+
+.top-wrapper video {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;  // z-indexの指定用
+  object-fit: cover;
+  z-index: -1;
 }
 
 .top-container {
+  display: flex;
+  width: 80%;
+  height: 80%;
   color: white;
   text-align: center;
+  flex-flow: column;  // 子要素を縦に配置
+  justify-content:space-evenly;  // 均等割り付け
 }
 
 .top-container h1 {
-  font-size: 70px;
-  font-weight: 500;
+  font-size: 5em;
+}
+
+.break {
+  display: inline-block;
 }
 
 .top-container p {
-  font-size: 24px;
-  padding-bottom: 120px;
+  font-size: 1.5em;
 }
 
 .top-container a {
-  margin: 0 10px;
+  margin: 0 1em;
 }
 
 
-// Smartphone
+// Tablet
 
-@media (max-width: 670px) {
+@media (max-width: 768px) {
 
-  .top {
-    background-image: url("/top-smartphon.jpg");
+  // .btn
+  .top-container a {
+    width: 100%;
+    margin: 1em 0;
+  }
+
+}
+
+
+// Smartphon
+
+@media (max-width: 425px) {
+
+  html {
+    font-size: 0.8em;
   }
 
   .top-container {
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4);
+    text-align: left;
   }
 
-  .top-container h1 {
-    width: 100%;
-    font-size: 4rem;
-    line-height: 1.2;
-    text-align: left;
-    padding: 50% 10px 20px 10px;
-  }
-
-  .top-container p {
-    font-size: 1.5rem;
-    text-align: left;
-    padding: 0 10px 50px 10px;
+  .top-btn-container {
+    text-align: center;
   }
 
   // .btn
   .top-container a {
-    display: inline-block;
-    width: 80%;
-    height: 60px;
-    font-size: 1.2rem;
-    text-align: center;
-    vertical-align: middle;
-    margin: 15px;
+    margin: 1em 0;
   }
 
-}
-
-// Video of testtop
-
-.bg-video-wrap {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  background: url(https://designsupply-web.com/samplecontent/vender/codepen/20181014.png) no-repeat center center/cover;
-}
-
-video {
-  min-width: 100%;
-  min-height: 100vh;
-  z-index: 1;
-}
-
-.overlay {
-  width: 100%;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-image: linear-gradient(45deg, rgba(0,0,0,.3) 50%, rgba(0,0,0,.7) 50%);
-  background-size: 3px 3px;
-  z-index: 2;
 }
