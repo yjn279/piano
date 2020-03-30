@@ -14,8 +14,31 @@
         </p>
       </div>
       <div class="top-btn-container">
-        <a href="/signin" class="btn">サインイン</a>
-        <a href="/signup" class="btn">サインアップ</a>
+        <p class="btn" id="login-show" href="/signin">サインイン</p>
+        <p class="btn" id="signup-show" href="/signup">サインアップ</p>
       </div>
     </div>
+  </div>
+
+<!-- Modal -->
+<div class="top-modal-wrapper" id="top-modal">
+  <div class="top-modal-container">
+    <div class="top-form" id="signup-form">
+      <h2>新規登録</h2>
+      <form action="#" method="post">
+        <input class="top-form-margin" type="email" name="email" placeholder="メールアドレス">
+        <input type="password" name="password" placeholder="パスワード">
+      </form>
+      <a href="#" class="btn">確認</a>
+    </div>
+    <div class="top-form" id="login-form">
+      <h2>ログイン</h2>
+      <form action="#" method="post">
+        <input class="top-form-margin" type="email" name="email" placeholder="メールアドレス">
+        <input type="password" name="password" placeholder="パスワード">
+      </form>
+      <a href="#" class="btn">確認</a>
+    </div>
+    <div class="fa fa-2x fa-times" id="close-modal"></div>
+  </div>
 </div>
