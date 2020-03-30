@@ -1,45 +1,37 @@
 header {
   width: 100vw;
-  height: 64px;
   position: fixed;
   z-index: 2;
-  // background-color: #3ecdc6;
 }
 
+// topページで背景動画の下に隠すため、別に指定
 .header-background {
   width: 100vw;
-  height: 64px;
+  height: 4rem;
   position: fixed;
   z-index: 1;
   background-color: #3ecdc6;
 }
 
 .header-logo {
-  float: left;
-  padding-left: 20px;
-  line-height: 64px;
-}
-
-.header-logo a{
+  font-size: 1.5rem;
   color: white;
-  font-size: 22px;
+  line-height: 4rem;
+  padding-left: 1.25rem;
 }
 
 .header-menus {
   float: right;
-  padding-right: 20px;
+  padding-right: 1.25rem;
 }
 
 .header-menus li {
+  font-size: 1rem;
   float: left;
-  line-height: 64px;
-  font-size: 13px;
-  color: white;
-  padding-left: 15px;
+  line-height: 4rem;
+  padding-left: 1rem;
 }
 
 .header-menus a {
-  float: left;
-  font-size: 13px;
   color: white;
 }
