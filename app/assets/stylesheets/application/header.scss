@@ -35,3 +35,29 @@ header {
 .header-menus a {
   color: white;
 }
+
+// font-sizeが指定できないため、classではなくidで指定
+#header-icon {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  float: right;
+  line-height: 4rem;
+  padding-right: 1.25rem;
+}
+
+
+// Tablet or Smartphon
+
+@media (max-width: 768px) {
+
+  .header-menus {
+    display: none;
+  }
+
+  #header-icon {
+    display: inline-block;
+  }
+
+
+}
