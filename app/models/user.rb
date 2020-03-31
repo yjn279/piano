@@ -6,4 +6,5 @@ class User < ApplicationRecord
     # emailカラムに関するバリデーション
     validates :email , {presence: true,uniqueness: true}
     
+    validates :password, {presence: true}
 end
