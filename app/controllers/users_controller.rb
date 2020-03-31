@@ -3,6 +3,7 @@ class UsersController < ApplicationController
     before_action :forbid_login_user, {only: [:new, :create, :login_form, :login]}
     before_action :ensure_correct_user, {only: [:edit, :update]}
     
+
     def testtop
         @user = User.new
         @user1 = User.find_by(email: params[:email], password: params[:password])
@@ -19,7 +20,7 @@ class UsersController < ApplicationController
           
         end
         
-        end
+    end
     
   def index
       @users = User.all
