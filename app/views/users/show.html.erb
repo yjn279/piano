@@ -16,7 +16,11 @@
       <h2><%= @user.name %></h2>
       <!-- 以下で、メールアドレスを出力 -->
       <p><%= @user.email %></p>
+      <% if @user.id == @current_user.id %>
+
       <%= link_to("編集", "/users/#{@user.id}/edit") %>
+      
+      <% end %>
     </div>
   </div>
 </div>
