@@ -39,15 +39,15 @@
     </div>
     <div class="top-form" id="login-form">
       <h2>ログイン</h2>
-      <%# <%= form_tag("/login") do %> %>
-      <form action="#" method="post">
+      <%= form_tag("/login") do %>
+      <!-- <form action="#" method="post"> -->
         <input class="top-form-margin" type="email" name="email" placeholder="メールアドレス" value="<%= @email %>">
         <input type="password" name="password" placeholder="パスワード" value="<%= @password %>">
-      </form>
-      <a href="#" class="btn">確認</a>
-      <!-- <input type="submit" value="ログイン"> -->
 
-      <%# <% end %> %>
+      <!-- <a href="#" class="btn">確認</a> -->
+      <input type="submit" value="ログイン">
+
+      <% end %>
     </div>
     <div class="fa fa-2x fa-times" id="close-modal"></div>
   </div>
