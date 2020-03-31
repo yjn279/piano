@@ -1,7 +1,5 @@
 {
   "name": "piano_app",
   "private": true,
-  "dependencies": {
-    "fullcalendar": "^3.10.1"
-  }
+  "dependencies": {}
 }
