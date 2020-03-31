@@ -3,6 +3,24 @@ class UsersController < ApplicationController
     before_action :forbid_login_user, {only: [:new, :create, :login_form, :login]}
     before_action :ensure_correct_user, {only: [:edit, :update]}
     
+
+    def testtop
+        @user = User.new
+        @user1 = User.find_by(email: params[:email], password: params[:password])
+        if @user1
+            session[:user_id] = @user1.id
+          flash[:notice] = "ログインしました"
+          redirect_to("/posts/index")
+        else
+        @error_message = "メールアドレスまたはパスワードが間違っています"
+        @email = params[:email]
+        @password = params[:password]
+        
+          render("testtop")
+          
+        end
+        
+    end
     
   def index
       @users = User.all
