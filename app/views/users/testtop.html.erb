@@ -28,20 +28,26 @@
 
   <!--   <form action="#" method="post"> -->
 <%= form_tag("/users/create") do %>
+        <input name="name" placeholder="ユーザー名" value="<%= @user.name %>">
         <input class="top-form-margin" type="email" name="email" placeholder="メールアドレス" value="<%= @user.email %>" >
         <input type="password" name="password" placeholder="パスワード" value="<%= @user.password %>" >
-<input type="submit" value="新規登録">
-<% end %>
+        <input type="submit" value="新規登録">
+        <% end %>
+
   <!--   </form>-->
       <!-- <a href="#" class="btn">確認</a> -->
     </div>
     <div class="top-form" id="login-form">
       <h2>ログイン</h2>
+      <%# <%= form_tag("/login") do %> %>
       <form action="#" method="post">
-        <input class="top-form-margin" type="email" name="email" placeholder="メールアドレス">
-        <input type="password" name="password" placeholder="パスワード">
+        <input class="top-form-margin" type="email" name="email" placeholder="メールアドレス" value="<%= @email %>">
+        <input type="password" name="password" placeholder="パスワード" value="<%= @password %>">
       </form>
-      <!-- <a href="#" class="btn">確認</a> -->
+      <a href="#" class="btn">確認</a>
+      <!-- <input type="submit" value="ログイン"> -->
+
+      <%# <% end %> %>
     </div>
     <div class="fa fa-2x fa-times" id="close-modal"></div>
   </div>
