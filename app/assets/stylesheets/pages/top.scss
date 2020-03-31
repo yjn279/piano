@@ -1,0 +1,150 @@
+.top-wrapper {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  justify-content: center;  // 子要素を均等割り付け
+  align-items: center;  // 子要素を上下均等割り付け
+  background-color: black;
+}
+
+.top-wrapper video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+}
+
+.top-container {
+  display: flex;
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  color: white;
+  text-align: center;
+  flex-flow: column;  // 子要素を縦に配置
+  justify-content:space-evenly;  // 均等割り付け
+
+}
+
+.top-container h1 {
+  font-size: 5rem;
+}
+
+.break {
+  display: inline-block;
+}
+
+.top-container p {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.top-container .btn {
+  font-size: 1rem;
+  margin: 0 1rem;
+}
+
+
+// Modal
+
+.top-modal-wrapper {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.top-modal-container {
+  display: flex;
+  position: absolute;
+  width: 40%;
+  height: 60%;
+  border-radius: 0.5rem;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.top-form {
+  display: none;
+  width: 60%;
+  height: 90%;
+  flex-flow: column;
+  justify-content:space-evenly;
+  align-items: center;
+}
+
+.top-form h2 {
+  color: grey;
+  letter-spacing: 1px;
+}
+
+.top-form form {
+  width: 100%;
+}
+
+.top-form input {
+  width: 100%;
+  padding: 0.8rem;
+  border: solid 1px #d0d5d8;
+  border-radius: 0.3rem;
+}
+
+.top-form-margin {
+  margin-bottom: 3vh;
+}
+
+.top-form .btn {
+  width: 80%;
+  font-size: 1rem;
+}
+
+#close-modal {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  color: rgba(128, 128, 128, 0.46);
+  cursor: pointer;
+}
+
+
+// Tablet
+
+@media (max-width: 768px) {
+
+  .top-container .btn {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  // Modal
+  .top-modal-container {
+    width: 80%;
+  }
+
+}
+
+
+// Smartphon
+
+@media (max-width: 425px) {
+
+  html {
+    font-size: 0.8rem;
+  }
+
+  .top-container {
+    text-align: left;
+  }
+
+  .top-btn-container {
+    text-align: center;
+  }
+
+}
