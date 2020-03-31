@@ -1,0 +1,63 @@
+header {
+  width: 100vw;
+  position: fixed;
+  z-index: 2;
+}
+
+// topページで背景動画の下に隠すため、別に指定
+.header-background {
+  width: 100vw;
+  height: 4rem;
+  position: fixed;
+  z-index: 1;
+  background-color: #3ecdc6;
+}
+
+.header-logo {
+  font-size: 1.5rem;
+  color: white;
+  line-height: 4rem;
+  padding-left: 1.25rem;
+}
+
+.header-menus {
+  float: right;
+  padding-right: 1.25rem;
+}
+
+.header-menus li {
+  font-size: 1rem;
+  float: left;
+  line-height: 4rem;
+  padding-left: 1rem;
+}
+
+.header-menus a {
+  color: white;
+}
+
+// font-sizeが指定できないため、classではなくidで指定
+#header-icon {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  float: right;
+  line-height: 4rem;
+  padding-right: 1.25rem;
+}
+
+
+// Tablet or Smartphon
+
+@media (max-width: 768px) {
+
+  .header-menus {
+    display: none;
+  }
+
+  #header-icon {
+    display: inline-block;
+  }
+
+
+}
