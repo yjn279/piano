@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 2020_04_05_113126) do
 
   create_table "kirkokus", force: :cascade do |t|
-    t.datetime "datetime"
-    t.time "time"
+    t.string "datetime"
+    t.string "time"
     t.text "content"
     t.string "image"
     t.datetime "created_at", null: false
