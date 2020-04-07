@@ -1,8 +1,9 @@
 <div class="main posts-index">
   <div class="container">
-
+<h2>練習時間記録</h2>
+<%= column_chart @data %>
       <!-- 以下の投稿を、変数post1を用いて書き換えてください -->
-      <% @kirokus.each do |kiroku| %>
+      <% @kiroku.each do |kiroku| %>
       <% %>
       <div class="posts-index-item">
       <%= link_to(kiroku.datetime.month.to_s + "/" + kiroku.datetime.day.to_s , "/kiroku/#{kiroku.id}") %>
