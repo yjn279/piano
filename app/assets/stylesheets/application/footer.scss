@@ -1,0 +1,33 @@
+footer {
+  position: fixed;
+  bottom:0;
+  width: 100vw;
+  height: 9vh;
+  }
+
+footer li {
+  float: left;
+  width: 25%;
+  font-size: 1.5rem;
+  }
+
+footer a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 5vh;
+  border-right: solid 2px;
+  margin: 2vh 0;
+}
+
+#footer-right{
+  border-right: none;
+}
+
+footer .fas {
+  margin-right: 0.5rem;
+}
+
+footer a:hover {
+    color:#a9a9a9;
+  }

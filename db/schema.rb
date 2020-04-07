@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_07_081817) do
+ActiveRecord::Schema.define(version: 2020_04_07_115242) do
 
   create_table "kirkokus", force: :cascade do |t|
     t.string "datetime"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2020_04_07_081817) do
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
   end
 
   create_table "likes", force: :cascade do |t|
