@@ -4,18 +4,9 @@ header {
   z-index: 2;
 }
 
-// topページで背景動画の下に隠すため、別に指定
-.header-background {
-  width: 100vw;
-  height: 4rem;
-  position: fixed;
-  z-index: 1;
-  background-color: #3ecdc6;
-}
-
 .header-logo {
+  display: inline-block;
   font-size: 1.5rem;
-  color: white;
   line-height: 4rem;
   padding-left: 1.25rem;
 }
@@ -29,21 +20,39 @@ header {
   font-size: 1rem;
   float: left;
   line-height: 4rem;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
 }
 
-.header-menus a {
+.header-signout a {
   color: white;
 }
 
-// font-sizeが指定できないため、classではなくidで指定
-#header-icon {
+#header-signin {
   display: none;
   font-size: 2rem;
-  color: white;
+  color: black;
   float: right;
   line-height: 4rem;
   padding-right: 1.25rem;
+}
+
+#header-signout {
+  display: none;
+  font-size: 2rem;
+  color: black;
+  float: right;
+  line-height: 4rem;
+  padding-right: 1.25rem;
+}
+
+// topページで背景動画の下に隠すため、別に指定
+#header-background {
+  width: 100vw;
+  height: 4rem;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  border-bottom: solid 2px black;
 }
 
 
@@ -55,8 +64,13 @@ header {
     display: none;
   }
 
-  #header-icon {
+  #header-signin {
     display: inline-block;
+  }
+
+  #header-signout {
+    display: inline-block;
+    color: white;
   }
 
 
