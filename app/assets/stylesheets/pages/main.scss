@@ -1,37 +1,42 @@
-.main {
+#calendar {
   position: absolute;
-  top: 64px;
-  width: 100%;
-  height: auto;
-  min-height: 100%;
+  top: calc(9vh + 2.5vh);
+  left: 2.5vw;
 }
 
-.top-main {
-  padding: 200px 0 100px;
+.calendar-title {
   text-align: center;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: auto;
-  min-height: 100%;
-  background-repeat: no-repeat;
-  background-position: center 50%;
-  background-size: cover;
+  font-size: 1.8rem;
+  border-bottom: solid;
+}
+
+.calendar-table {
+
+  .is-today {
+    color: red;
+  }
+
+  td {
+    width: 9vh;
+    height: 9vh;
+    line-height: 9vh;
+    text-align: center;
+  }
 
 }
 
-.top-message {
+#calendar-input {
+  display: inline-block;
   position: relative;
-}
-
-.top-main h2 {
-  font-size: 70px;
-  font-weight: 500;
-  line-height: 1.3;
-  -webkit-font-smoothing: antialiased;
-  margin-bottom: 20px;
-}
-
-.top-main p {
-  font-size: 24px;
+  width: 100%;
+  height: 9vh;
+  font-size: 1.8rem;
+  // color: black;
+  line-height: 9vh;
+  text-align: center;
+  // background-color: white;
+  border: solid;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: black;
 }
