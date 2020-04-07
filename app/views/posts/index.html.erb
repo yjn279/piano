@@ -1,100 +1,83 @@
-<!--
-<div class="main posts-index">
-  <div class="container">
-    <%# <% @posts.each do |post| %> %>
-      <div class="posts-index-item">
-        <div class="post-left">
-          <%# <img src="<%= "/user_images/#{post.user.image_name}" %>"> %>
-        </div>
-        <div class="post-right">
-          <div class="post-user-name">
-            <%# <%= link_to(post.user.name, "/users/#{post.user.id}") %> %>
-          </div>
-          <%# <%= link_to(post.content, "/posts/#{post.id}") %> %>
-        </div>
-      </div>
-    <%# <% end %> %>
-  </div>
-</div>
--->
+<!-- <div class="main posts-index"> <div class="container"> <%# <% @posts.each do |post| %> %> <div class="posts-index-item"> <div class="post-left"> <%# <img src="<%= "/user_images/#{post.user.image_name}" %>"> %> </div> <div class="post-right">
+<div class="post-user-name"> <%# <%= link_to(post.user.name, "/users/#{post.user.id}") %> %> </div> <%# <%= link_to(post.content, "/posts/#{post.id}") %> %> </div> </div> <%# <% end %> %> </div> </div> -->
 
-<div id="calendar">
-  <h2 class="calendar-title">
-    <span id="js-year"></span>年
-    <span id="js-month"></span>月
-  </h2>
-  <table class="calendar-table">
-    <thead>
-      <tr>
-        <th>Sun</th>
-        <th>Mon</th>
-        <th>Tue</th>
-        <th>Wed</th>
-        <th>Thu</th>
-        <th>Fri</th>
-        <th>Sat</th>
-      </tr>
-    </thead>
-    <tbody id="js-calendar-body"></tbody>
-    <script type="text/javascript">
-      var $window = $(window);
-      var $year = $('#js-year');
-      var $month = $('#js-month');
-      var $tbody = $('#js-calendar-body');
+<div class="main-container">
+  <div id="calendar">
+    <h2 class="calendar-title">
+      <span id="js-year"></span>年
+      <span id="js-month"></span>月
+    </h2>
+    <table class="calendar-table">
+      <thead>
+        <tr>
+          <th>Sun</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th>Sat</th>
+        </tr>
+      </thead>
+      <tbody id="js-calendar-body"></tbody>
+      <script type="text/javascript">
+        var $window = $(window);
+        var $year = $('#js-year');
+        var $month = $('#js-month');
+        var $tbody = $('#js-calendar-body');
 
-      var today = new Date();
-      var currentYear = today.getFullYear(),
-        currentMonth = today.getMonth();
+        var today = new Date();
+        var currentYear = today.getFullYear(),
+          currentMonth = today.getMonth();
 
-      $window.on('load', function () {
-        calendarHeading(currentYear, currentMonth);
-        calendarBody(currentYear, currentMonth, today);
-      });
+        $window.on('load', function () {
+          calendarHeading(currentYear, currentMonth);
+          calendarBody(currentYear, currentMonth, today);
+        });
 
-      function calendarBody(year, month, today) {
-        var todayYMFlag = today.getFullYear() === year && today.getMonth() === month
-          ? true
-          : false; // 本日の年と月が表示されるカレンダーと同じか判定
-        var startDate = new Date(year, month, 1); // その月の最初の日の情報
-        var endDate = new Date(year, month + 1, 0); // その月の最後の日の情報
-        var startDay = startDate.getDay(); // その月の最初の日の曜日を取得
-        var endDay = endDate.getDate(); // その月の最後の日の曜日を取得
-        var textSkip = true; // 日にちを埋める用のフラグ
-        var textDate = 1; // 日付(これがカウントアップされます)
-        var tableBody = ''; // テーブルのHTMLを格納する変数
+        function calendarBody(year, month, today) {
+          var todayYMFlag = today.getFullYear() === year && today.getMonth() === month
+            ? true
+            : false; // 本日の年と月が表示されるカレンダーと同じか判定
+          var startDate = new Date(year, month, 1); // その月の最初の日の情報
+          var endDate = new Date(year, month + 1, 0); // その月の最後の日の情報
+          var startDay = startDate.getDay(); // その月の最初の日の曜日を取得
+          var endDay = endDate.getDate(); // その月の最後の日の曜日を取得
+          var textSkip = true; // 日にちを埋める用のフラグ
+          var textDate = 1; // 日付(これがカウントアップされます)
+          var tableBody = ''; // テーブルのHTMLを格納する変数
 
-        for (var row = 0; row < 6; row++) {
-          var tr = '<tr>';
+          for (var row = 0; row < 6; row++) {
+            var tr = '<tr>';
 
-          for (var col = 0; col < 7; col++) {
-            if (row === 0 && startDay === col) {
-              textSkip = false;
+            for (var col = 0; col < 7; col++) {
+              if (row === 0 && startDay === col) {
+                textSkip = false;
+              }
+              if (textDate > endDay) {
+                textSkip = true;
+              }
+              var addClass = todayYMFlag && textDate === today.getDate()
+                ? 'is-today'
+                : '';
+              var textTd = textSkip
+                ? ' '
+                : textDate++;
+              var td = '<td class="' + addClass + '">' + textTd + '</td>';
+              tr += td;
             }
-            if (textDate > endDay) {
-              textSkip = true;
-            }
-            var addClass = todayYMFlag && textDate === today.getDate()
-              ? 'is-today'
-              : '';
-            var textTd = textSkip
-              ? ' '
-              : textDate++;
-            var td = '<td class="' + addClass + '">' + textTd + '</td>';
-            tr += td;
+            tr += '</tr>';
+            tableBody += tr;
           }
-          tr += '</tr>';
-          tableBody += tr;
+          $tbody.html(tableBody);
         }
-        $tbody.html(tableBody);
-      }
 
-      function calendarHeading(year, month) {
-        $year.text(year);
-        $month.text(month + 1);
-      }
-    </script>
-  </table>
-  <a id="calendar-input" href="new">
-    レッスンを記録
-  </a>
+        function calendarHeading(year, month) {
+          $year.text(year);
+          $month.text(month + 1);
+        }
+      </script>
+    </table>
+    <a id="calendar-input" href="new">レッスンを記録</a>
+  </div>
 </div>

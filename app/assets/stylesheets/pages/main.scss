@@ -1,25 +1,37 @@
-#calendar {
+.main-container {
   position: absolute;
-  top: calc(9vh + 2.5vh);
-  left: 2.5vw;
+  top: 14vh;
+  right: 5vw;
+  bottom: 14vh;
+  left: 5vw;
+}
+
+#calendar {
+  display: flex;
+  width: 30vw;
+  height: 100%;
+  flex-flow: column;  // 子要素を縦に配置
+  justify-content:space-evenly;  // 均等割り付け
 }
 
 .calendar-title {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 2rem;
+  padding-bottom: 1vh;
   border-bottom: solid;
 }
 
 .calendar-table {
+
+  width: 100%;
+  height: 70%;
+  table-layout: fixed;
 
   .is-today {
     color: red;
   }
 
   td {
-    width: 9vh;
-    height: 9vh;
-    line-height: 9vh;
     text-align: center;
   }
 
@@ -27,15 +39,11 @@
 
 #calendar-input {
   display: inline-block;
-  position: relative;
   width: 100%;
-  height: 9vh;
-  font-size: 1.8rem;
-  // color: black;
-  line-height: 9vh;
+  height: 7vh;
+  font-size: 1.5rem;
+  line-height: 7vh;
   text-align: center;
-  // background-color: white;
-  border: solid;
   border-radius: 0.5rem;
   color: white;
   background-color: black;
