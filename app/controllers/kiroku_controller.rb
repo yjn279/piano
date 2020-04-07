@@ -1,4 +1,5 @@
 class KirokuController < ApplicationController
+    before_action :authenticate_user
   def index
       @kirokus = Kirkoku.all.order(created_at: :desc)
       
