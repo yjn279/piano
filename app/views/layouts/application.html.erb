@@ -8,9 +8,11 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <header>
+<<<<<<< HEAD
       <% if @current_user %>
         <div class="header-logo">
           <%= link_to("PianoApp", "/posts/index") %>
@@ -33,6 +35,38 @@
           </li>
         </ul>
         <span class="fa fa-bars" id="header-signin"></span>
+=======
+      <div class="header-logo">
+        <% if @current_user %>
+      <%= link_to("PianoApp", "/main") %>
+    <% else %>
+      <%= link_to("PianoApp", "/testtop") %>
+    <% end %>
+      </div>
+      <ul class="header-menus">
+
+
+        <% if @current_user %>
+        <li>
+
+        <!-- コードを追加し、中のユーザーのidを表示してください -->
+        <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+      </li>
+
+        <li>
+          <%= link_to("投稿一覧", "/posts/index") %>
+        </li>
+        <li>
+          <%= link_to("新規投稿", "/posts/new") %>
+        </li>
+        <li>
+          <%= link_to("ユーザー一覧", "/users/index") %>
+        </li>
+        <li>
+        <!-- ログアウト用のリンクを追加してください -->
+        <%= link_to("ログアウト", "/logout", {method: :post}) %>
+      </li>
+>>>>>>> a8963801101b21e011d547d8f0b0eac6711b6b41
       <% else %>
         <div class="header-logo header-signout">
           <%= link_to("PianoApp", "/") %>
