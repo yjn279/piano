@@ -32,27 +32,26 @@
             <%= link_to("ログアウト", "/logout", {method: :post}) %>
           </li>
         </ul>
-        <span class="fa fa-bars" id="header-signin"></span>
-      <% else %>
-        <div class="header-logo header-signout">
-          <%= link_to("PianoApp", "/") %>
-        </div>
-        <ul class="header-menus header-signout">
-          <li>
-            <%= link_to("PianoAppとは", "/about") %>
-          </li>
-          <li>
-            <%= link_to("新規登録", "/signup") %>
-          </li>
-          <li>
-            <%= link_to("ログイン", "/login") %>
-          </li>
-        </ul>
-        <span class="fa fa-bars" id="header-signout"></span>
-      <% end %>
+        <% else %>
+          <div class="header-logo">
+            <%= link_to("PianoApp", "/") %>
+          </div>
+          <ul class="header-menus">
+            <li>
+              <%= link_to("PianoAppとは", "/about") %>
+            </li>
+            <li>
+              <%= link_to("新規登録", "/signup") %>
+            </li>
+            <li>
+              <%= link_to("ログイン", "/login") %>
+            </li>
+          </ul>
+        <% end %>
+      <span class="fa fa-bars" id="header-icon"></span>
     </header>
     <!-- header-backgroundをheaderの子要素にすると、 z-indexがローカルになるためtopページで支障が出る-->
-    <div id="header-background"></div>
+    <div class="header-background"></div>
     <% if flash[:notice]%>
       <div class="flash">
         <%= flash[:notice]%>
