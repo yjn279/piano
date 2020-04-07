@@ -1,37 +1,50 @@
-.main {
+.main-container {
   position: absolute;
-  top: 64px;
-  width: 100%;
-  height: auto;
-  min-height: 100%;
+  top: 14vh;
+  right: 5vw;
+  bottom: 14vh;
+  left: 5vw;
 }
 
-.top-main {
-  padding: 200px 0 100px;
+#calendar {
+  display: flex;
+  width: 30vw;
+  height: 100%;
+  flex-flow: column;  // 子要素を縦に配置
+  justify-content:space-evenly;  // 均等割り付け
+}
+
+.calendar-title {
   text-align: center;
-  position: absolute;
-  top: 0;
+  font-size: 2rem;
+  padding-bottom: 1vh;
+  border-bottom: solid;
+}
+
+.calendar-table {
+
   width: 100%;
-  height: auto;
-  min-height: 100%;
-  background-repeat: no-repeat;
-  background-position: center 50%;
-  background-size: cover;
+  height: 70%;
+  table-layout: fixed;
+
+  .is-today {
+    color: red;
+  }
+
+  td {
+    text-align: center;
+  }
 
 }
 
-.top-message {
-  position: relative;
-}
-
-.top-main h2 {
-  font-size: 70px;
-  font-weight: 500;
-  line-height: 1.3;
-  -webkit-font-smoothing: antialiased;
-  margin-bottom: 20px;
-}
-
-.top-main p {
-  font-size: 24px;
+#calendar-input {
+  display: inline-block;
+  width: 100%;
+  height: 7vh;
+  font-size: 1.5rem;
+  line-height: 7vh;
+  text-align: center;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: black;
 }

@@ -6,36 +6,35 @@
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
     <header>
-<<<<<<< HEAD
       <% if @current_user %>
-        <div class="header-logo">
-          <%= link_to("PianoApp", "/main") %>
+        <div id="header-background">
+          <div class="header-logo">
+            <%= link_to("PianoApp", "/main") %>
+          </div>
+          <ul class="header-menus">
+            <li>
+              <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+            </li>
+            <li>
+              <%= link_to("投稿一覧", "/posts/index") %>
+            </li>
+            <li>
+              <%= link_to("新規投稿", "/posts/new") %>
+            </li>
+            <li>
+              <%= link_to("ユーザー一覧", "/users/index") %>
+            </li>
+            <li>
+              <%= link_to("ログアウト", "/logout", {method: :post}) %>
+            </li>
+          </ul>
+          <span class="fa fa-bars" id="header-signin"></span>
         </div>
-        <ul class="header-menus">
-          <li>
-            <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
-          </li>
-          <li>
-            <%= link_to("投稿一覧", "/posts/index") %>
-          </li>
-          <li>
-            <%= link_to("新規投稿", "/posts/new") %>
-          </li>
-          <li>
-            <%= link_to("ユーザー一覧", "/users/index") %>
-          </li>
-          <li>
-            <%= link_to("ログアウト", "/logout", {method: :post}) %>
-          </li>
-        </ul>
-        <span class="fa fa-bars" id="header-signin"></span>
       <% else %>
         <div class="header-logo header-signout">
           <%= link_to("PianoApp", "/") %>
@@ -54,13 +53,42 @@
         <span class="fa fa-bars" id="header-signout"></span>
       <% end %>
     </header>
-    <!-- header-backgroundをheaderの子要素にすると、 z-indexがローカルになるためtopページで支障が出る-->
-    <div id="header-background"></div>
     <% if flash[:notice]%>
       <div class="flash">
         <%= flash[:notice]%>
       </div>
     <% end %>
     <%= yield %>
+    <% if @current_user %>
+      <footer>
+        <ul>
+          <li>
+            <a href="/main">
+              <span class="fas fa-home"></span>
+              <span>ホーム</span>
+            </a>
+          </li>
+          <li>
+            <a href="/kiroku/new">
+              <span class="fas fa-edit"></span>
+              <span>記録</span>
+            </a>
+          </li>
+          <li>
+            <a href="/posts/index">
+              <span class="fas fa-list-ul"></span>
+              <span>投稿</span>
+            </a>
+          </li>
+          <li>
+            <a id="footer-right" href="/about">
+              <span class="fas fa-cogs"></span>
+              <span>設定</span>
+            </a>
+          </li>
+        </ul>
+      </footer>
+      <script src="https://kit.fontawesome.com/c7e7195a32.js" crossorigin="anonymous"></script>
+    <% end %>
   </body>
 </html>
