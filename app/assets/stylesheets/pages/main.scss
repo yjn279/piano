@@ -39,24 +39,21 @@
 }
 
 #calendar-input {
-  display: inline-block;
   width: 100%;
-  height: 7vh;
+  height: calc(13.44% - 1.8rem);  // 48% * 28% -1.2rem * 1.5
+  cursor: pointer;
   font-size: 1.5rem;
-  line-height: 7vh;
-  text-align: center;
-  border-radius: 0.5rem;
   color: white;
-  background-color: black;
+  line-height: calc(48% * 28% - 1.8rem);
 }
 
-#graph {
+#graph {  // to display none
   width: 55%;
   font-size: 5rem;
   text-align: center;  // delete
   line-height: 72vh;  // delete
   border: solid 1px;  // delete
-  border-radius: 1rem;  // delete
+  border-radius: 0.5vmax;  // delete
 }
 
 #graph iframe {
@@ -65,4 +62,61 @@
   bottom: 0;
   width: 300px;
   height: 80px;
+}
+
+#main-form {
+  display: none;  // to block
+  width: 55%;
+  font-size: 1.2rem;
+}
+
+#main-form form {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-flow: column;  // 子要素を縦に配置
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+#main-form textarea, #main-form input {
+  width: 100%;
+  height: calc(100% - 1.2rem * 1.5);
+  font-size: 1.2rem;
+  border: solid 1px silver;
+  border-radius: 0.5vmax;
+}
+
+#main-form .btn {
+  position: relative;
+  top: calc(1.2rem * 1.5);
+}
+
+#main-form p {
+  text-align: left;
+}
+
+#main-textarea {
+  width: 100%;
+  height: 48%;
+}
+
+#main-input {
+  display: flex;
+  width: 100%;
+  height: 48%;
+  justify-content: space-between;
+}
+
+.main-input-side {
+  display: flex;
+  width: 48%;
+  height: 100%;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.main-input-side div {
+  height: 28%
 }
