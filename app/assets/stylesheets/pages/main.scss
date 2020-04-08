@@ -1,27 +1,28 @@
 .main-container {
+  display: flex;
   position: absolute;
+  width: 100vw;
   top: 14vh;
-  right: 5vw;
   bottom: 14vh;
-  left: 5vw;
+  justify-content: space-evenly;
 }
 
 #calendar {
   display: flex;
-  width: 30vw;
+  width: 30%;
   height: 100%;
   flex-flow: column;  // 子要素を縦に配置
-  justify-content:space-evenly;  // 均等割り付け
+  justify-content:space-between;;  // 均等割り付け
 }
 
-.calendar-title {
+#calendar-title {
   text-align: center;
   font-size: 2rem;
   padding-bottom: 1vh;
   border-bottom: solid;
 }
 
-.calendar-table {
+#calendar-table {
 
   width: 100%;
   height: 70%;
@@ -47,4 +48,21 @@
   border-radius: 0.5rem;
   color: white;
   background-color: black;
+}
+
+#graph {
+  width: 55%;
+  font-size: 5rem;
+  text-align: center;  // delete
+  line-height: 72vh;  // delete
+  border: solid 1px;  // delete
+  border-radius: 1rem;  // delete
+}
+
+#graph iframe {
+  position: absolute;
+  right: 5vw;
+  bottom: 0;
+  width: 300px;
+  height: 80px;
 }
