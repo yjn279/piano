@@ -1,11 +1,19 @@
 .container {
+  position: relative;
   max-width: 600px;
-  margin: 60px auto;
+  margin: 5vh auto;
   padding-left: 15px;
   padding-right: 15px;
   clear: both;
 }
 
+.posts-index {
+  position: absolute;
+  top: 14vh;
+  right: 5vw;
+  bottom: 14vh;
+  left: 5vh;
+}
 
 /* posts/index ================================ */
 .posts-index-item {
