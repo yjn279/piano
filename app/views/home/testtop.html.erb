@@ -1,48 +1,39 @@
 <div class="top-wrapper">
-  <video src="piano.mp4" autoplay muted loop></video>
-    <div class="top-container">
-      <div class="top-text-container">
-        <h1>
-          <!--改行によるスペース削除のため、spanタグを改行 -->
-          <span class="break">ピアノの</span
-          ><span class="break">上達を</span
-          ><span class="break">最大化。</span>
-        </h1>
-        <p>
-          <span class="break">ピアノ仲間、</span
-          ><span class="break">たくさん作ろう。</span>
-        </p>
-      </div>
-      <div class="top-btn-container">
-        <p class="btn" id="login-show" href="/signin">サインイン</p>
-        <p class="btn" id="signup-show" href="/signup">サインアップ</p>
-      </div>
+  <video src="piano.mp4" autoplay="autoplay" muted="muted" loop="loop"></video>
+  <div class="top-container">
+    <div class="top-text-container">
+      <h1>
+        <!--改行によるスペース削除のため、spanタグを改行 -->
+        <span class="break">ピアノの</span
+        ><span class="break">上達を</span
+        ><span class="break">最大化。</span>
+      </h1>
+      <p>
+        <span class="break">ピアノ仲間、</span ><span class="break">たくさん作ろう。</span>
+      </p>
+    </div>
+    <div>
+      <p class="btn" id="login-show" href="/signin">サインイン</p>
+      <p class="btn" id="signup-show" href="/signup">サインアップ</p>
     </div>
   </div>
-
+</div>
 <!-- Modal -->
 <div class="top-modal-wrapper" id="top-modal">
   <div class="top-modal-container">
     <div class="top-form" id="signup-form">
       <h2>新規登録</h2>
-
-  <!--   <form action="#" method="post"> -->
-<%= form_tag("/users/create") do %>
-        <input class="top-form-margin" type="email" name="email" placeholder="メールアドレス" value="<%= @user.email %>" >
-        <input type="password" name="password" placeholder="パスワード" value="<%= @user.password %>" >
-<input type="submit" value="新規登録">
-<% end %>
-  <!--   </form>-->
-      <!-- <a href="#" class="btn">確認</a> -->
+      <%= form_tag("/users/create") do %>
+      <input class="top-form-margin" type="email" name="email" placeholder="メールアドレス" value="<%= @user.email %>">
+      <input type="password" name="password" placeholder="パスワード" value="<%= @user.password %>">
+      <input type="submit" value="新規登録">
     </div>
-    <div class="top-form" id="login-form">
-      <h2>ログイン</h2>
-      <form action="#" method="post">
-        <input class="top-form-margin" type="email" name="email" placeholder="メールアドレス">
-        <input type="password" name="password" placeholder="パスワード">
-      </form>
-      <!-- <a href="#" class="btn">確認</a> -->
-    </div>
-    <div class="fa fa-2x fa-times" id="close-modal"></div>
+    <h2>ログイン</h2>
+    <form action="#" method="post">
+      <input class="top-form-margin" type="email" name="email" placeholder="メールアドレス">
+      <input type="password" name="password" placeholder="パスワード">
+    <% end %>
   </div>
+  <div class="fa fa-2x fa-times" id="close-modal"></div>
+</div>
 </div>
