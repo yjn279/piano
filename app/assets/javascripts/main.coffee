@@ -8,7 +8,7 @@ $ ->
         'color': 'white',
         'background-color': ''
       )
-      $('#graph').show()
+      $('#graph').fadeIn()
       $('#main-form').hide()
 
     else
@@ -18,4 +18,4 @@ $ ->
         'background-color': 'white'
       )
       $('#graph').hide()
-      $('#main-form').show()
+      $('#main-form').fadeIn()
