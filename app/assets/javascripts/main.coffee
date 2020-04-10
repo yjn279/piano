@@ -1,13 +1,21 @@
 $ ->
 
   $('#calendar-input').click ->
-    $(@).text('記録をやめる').css(
-      color: 'black',
-      'background-color': 'white'
-      border: 'solid 1px',
-    )
-    $('#graph').hide()
-    $('#main-form').show()
 
+    if $('#calendar-input').hasClass('open')
+      $(@).removeClass('open')
+      $(@).text('記録する').css(
+        'color': 'white',
+        'background-color': ''
+      )
+      $('#graph').show()
+      $('#main-form').hide()
 
-# btn で　開いたり閉じたり
+    else
+      $(@).addClass('open')
+      $(@).text('記録をやめる').css(
+        'color': 'black',
+        'background-color': 'white'
+      )
+      $('#graph').hide()
+      $('#main-form').show()
