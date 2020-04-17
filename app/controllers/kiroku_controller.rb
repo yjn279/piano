@@ -3,7 +3,16 @@ class KirokuController < ApplicationController
   def index
       @kirokus = Kirkoku.all.order(created_at: :desc)
       @kiroku = Kirkoku.where(user_id: @current_user.id)
-      @data = Kirkoku.where(user_id: @current_user.id).order(created_at: :desc)
+#      @data = Kirkoku.all
+      @data = Kirkoku.where(user_id: @current_user.id)
+      
+      @data4 = @data.last(3)
+      
+      @data5 = @data4.pluck(:datetime, :time)
+      
+      @data2 = @data.limit(7)
+      @data3 = @data.sum(:time)
+      
   end
   
   def show

@@ -3,6 +3,10 @@ class PostsController < ApplicationController
     before_action :ensure_correct_user, {only: [:edit, :update, :destroy]}
   def index
     @posts = Post.all.order(created_at: :desc)
+#    @post = Post.find_by(id:params[:id])
+#     @post = Post.find_by(id: @curr)
+#    @likes_count = Like.where(post_id: @posts.ids).count
+    
   end
   def show
       @post = Post.find_by(id:params[:id])

@@ -13,8 +13,14 @@
 
 
         <%= link_to(post.content, "/posts/#{post.id}") %>
+      <br>
+      <div class="post-menus">
+        <%= Like.where(post_id: post.id).count %>いいね
+        </div>
       </div>
       </div>
+
+
     <% end %>
   </div>
 </div>

@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
     
     # before_actionにset_current_userメソッドを指定してください
     before_action :set_current_user
+  
     
     # set_current_userメソッドを定義してください
     def set_current_user
@@ -21,5 +22,7 @@ class ApplicationController < ActionController::Base
         redirect_to("/posts/index")
       end
     end
+    
+    
     
 end

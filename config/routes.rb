@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
 
 
+  resources :events
    post "likes/:post_id/create" => "likes#create"
    post "likes/:post_id/destroy" => "likes#destroy"
+   
+   
+   
+   
 get '/' => 'users#testtop'
 get 'testtop' => 'users#testtop'
   get "login" => "users#login_form"
@@ -48,5 +53,8 @@ get 'testtop' => 'users#testtop'
   get 'main' => 'home#main'
   get 'signin' => 'home#signin'
   get 'signup' => 'home#signup'
+  
+  root 'events#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
 end

@@ -1,7 +1,13 @@
 <div class="main posts-index">
   <div class="container">
 <h2>練習時間記録</h2>
-<%= column_chart @data %>
+<%= @data4 %>
+
+<% @data.map do |k| %>
+
+<%= column_chart [["Football", k.time.strftime("%H:%M")]]%>
+<% end %>
+<%# <%= column_chart @data.pluck(:datetime, :time) %> %>
       <!-- 以下の投稿を、変数post1を用いて書き換えてください -->
       <% @kiroku.each do |kiroku| %>
       <% %>

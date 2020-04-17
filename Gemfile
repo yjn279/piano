@@ -67,4 +67,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # 手動で追加
 gem 'jquery-rails'
 gem 'bcrypt'
+gem 'momentjs-rails'
+gem 'fullcalendar-rails'
 

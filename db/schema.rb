@@ -10,11 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_07_115242) do
+ActiveRecord::Schema.define(version: 2020_04_17_063826) do
+
+  create_table "events", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "kirkokus", force: :cascade do |t|
-    t.string "datetime"
-    t.string "time"
+    t.datetime "datetime"
+    t.time "time"
     t.text "content"
     t.string "image"
     t.datetime "created_at", null: false

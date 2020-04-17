@@ -1,4 +1,4 @@
-class CreateKirkokus < ActiveRecord::Migration[5.2]
+class CreateKirkokus < ActiveRecord::Migration[5.2]
   def change
     create_table :kirkokus do |t|
       t.string :datetime
